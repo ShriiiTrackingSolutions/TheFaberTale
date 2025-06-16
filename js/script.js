@@ -39,7 +39,7 @@ function loadHeaderFooter(callback) {
                       <li class="navLi"><a href="#" class="navLink">LinkHere</a></li> 
                     </ul>
                   </li>
-                  <li class="navLi"><a href="#" class="navLink">Gallery</a></li>
+                  <li class="navLi"><a href="gallery.html" class="navLink">Gallery</a></li>
                   <li class="navLi"><a href="contactUs.html" class="navLink">Contact</a></li>
                 </ul>
                 <div class="headSocial d-none d-lg-flex">
@@ -102,10 +102,10 @@ function loadHeaderFooter(callback) {
                <a class="footerLinks" href="about.html"> About Us</a>
              </li>
              <li>
-               <a class="footerLinks" href="#"> Gallery</a>
+               <a class="footerLinks" href="gallery.html"> Gallery</a>
              </li>
              <li>
-               <a class="footerLinks" href="#"> Contact</a>
+               <a class="footerLinks" href="contactUs.html"> Contact</a>
              </li>
            </ul>
          </div>

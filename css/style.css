@@ -1047,3 +1047,57 @@ color: #000;
 }
 
 /* git in Puch tach Kendra end */
+
+
+
+
+
+/* gallery categories start */
+
+.grid-item {
+   aspect-ratio: 4/3;
+   object-fit: cover;
+   margin-bottom: 24px;
+  }
+
+  .grid-sizer,.grid-item{
+    width: calc(33.333333% - 24px);                                                                              ;
+  }
+
+.gutter-sizer { 
+  width: 24px;
+}
+
+.grid-item--height2 {
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+.galleryCategories{
+  background: url('../image/BigBack.webp') center / cover no-repeat;
+}
+.ProductInfoG{
+  position: absolute;
+  inset: 0;
+  padding: 12px;
+  color: #ffffff;
+  background-color: #0000008a;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: color 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+.ProductInfoG span{
+  font-size: 18px;
+}
+.ProductInfoG span i{
+  margin-right: 4px;
+}
+.grid-item:hover .ProductInfoG{
+  opacity: 1;
+  color: #ffffff;
+}
+
+/* gallery categories end */
