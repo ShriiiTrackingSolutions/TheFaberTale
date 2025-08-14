@@ -21,6 +21,10 @@
 .Banner .owl-nav{
   display: none;
 }
+
+.filter-button-group button{
+  font-size: 14px;
+}
 }
 
 
@@ -36,12 +40,10 @@
   }
 
   .Banner .owl-dots {
-  bottom: -30px;
+  bottom: 12px;
 }
  
-  .Banner{
-    padding: 0 0 50px 0;
-  }
+
 
   .display-2 {
     font-size: 44px;
@@ -165,11 +167,16 @@
   .gutter-sizer { 
     width: 0;
   }
+
+  .filter-button-group button{
+  font-size: 12px;
 }
+}
+
+
 
 @media only screen and (max-height: 539.98px) {
   #ca1.owl-carousel .item {
-    padding: 0px 12px 80px;
     height: unset;
   }
   #ca1.owl-carousel .item > .container {
@@ -184,7 +191,6 @@
 
 @media only screen and (max-height: 539.98px) and (max-width: 1024px) {
   #ca1.owl-carousel .item {
-    padding: 0px 12px 80px;
     height: unset;
   }
   #ca1.owl-carousel .item > .container {
@@ -195,16 +201,6 @@
     transform: unset;
     width: auto;
   }
-
-#ca1.owl-carousel .item1 {
-  background: url("../image/Banner1.webp") center/cover no-repeat;
-}
-#ca1.owl-carousel .item2 {
-  background: url("../image/Banner2.webp") center/cover no-repeat;
-}
-#ca1.owl-carousel .item3 {
-  background: url("../image/Banner3.webp") center/cover no-repeat;
-}
 
 }
 

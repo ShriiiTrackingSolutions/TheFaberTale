@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@400;700&display=swap');
 
 :root {
-  --primary-color: #5A3E36;     
-  --secondary-color: #2D9CDB;   
-  --accentColour: #ff9173;  
-  --lightAccent: #ff9173;    
+  --primary-color: #2e2e2e;     
+  --secondary-color: #4e4e4e;   
+  --accentColour: #B0B7C0;  
+  --lightAccent: #97e7e7;    
   --black: #2B2B2B;
-  --lightprimary: #fbe6e0;
-  --lightBg: #FAF7F2; 
+  --lightprimary: #ebebeb;
+  --lightBg: #f1f1f1; 
   --Grey: #747474;          
 }
 
@@ -18,7 +18,6 @@
 body {
   font-family: 'Lato', sans-serif;
   color: #2B2B2B; /* Charcoal text */
-  background-color: #FAF7F2; /* Light natural background */
   margin: 0;
 }
 a {
@@ -77,6 +76,12 @@ img {
   z-index: 1055;
 }
 
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .wrapheder{
   min-height: 67.31px;
 }
@@ -109,21 +114,21 @@ img {
 
 .navLink {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-weight: bold;
   padding: 12px 8px;
   display: block;
   transition: color 0.3s ease-in-out;
 }
 .bg-light {
-  background-color: #ffffff!important;
+  background-color: #00000054 !important;
 }
 
 .navLink:hover{
-  color: var(--secondary-color);
+  color: var(--black);
 }
 .navLink.active {
-  color: var(--secondary-color);
+  color: var(--black);
 }
 .navLink svg{
   transform: translateY(-2px);
@@ -279,6 +284,10 @@ img {
 .headerAnimate {
   animation: 0.5s ease-in-out both slideUp;
 }
+
+.headerAnimate .bg-light {
+    background-color: #ffffffb0 !important;
+}
 @keyframes slideUp {
   0% {
     top: 50.48px;
@@ -292,6 +301,10 @@ img {
   top: 0;
 }
 
+.sticky-header.visible .bg-light {
+    background-color: #ffffff !important;
+}
+
 
 /* banner css start */
 #ca1.owl-carousel .bannerCard,
@@ -299,7 +312,7 @@ img {
   opacity: 0;
 }
 .Banner{
-  background-color: var(--lightBg);
+  background-color: var(--black);
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
@@ -307,6 +320,7 @@ img {
 .Banner .owl-nav {
   position: absolute;
   top: 50%;
+  color: #ffffff;
   transform: translateY(-50%);
   display: flex;
   flex-wrap: wrap;
@@ -359,20 +373,29 @@ img {
   border-radius: 50%;
   border: none;
   display: inline-block;
-  background: var(--lightAccent);
+  background: var(--Grey);
   margin: 4px 0;
 }
 .Banner .owl-dots button.owl-dot.active {
-  background-color: var(--primary-color);
+  background-color: var(--lightprimary);
 }
 .Banner .owl-dots button.owl-dot:focus {
   outline: 0;
 }
+
 #ca1.owl-carousel .item {
+  padding: 148.25px 12px;
+  height: 100vh;
+  min-height: 400px;
   position: relative;
+  background: linear-gradient(to right,#0000009c 40%, #00000028) 0 0 / cover;
 }
 #ca1.owl-carousel .item > .container {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   width: 100%;
   left: 0;
   right: 0;
@@ -382,26 +405,125 @@ img {
 }
 
 
-#ca1.owl-carousel .item2 .bannerCard,
-.bannerCard{
-  margin: auto;
-}
-.bannertext1 {
-  border-radius: 25px;
+
+#ca1.owl-carousel .item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -2;
 }
 
-.btnoutline{
-  display: inline-block;
-    color: #ffffff;
-    font-weight: 600;
-    padding: 14px 24px;
-    background-color: var(--accentColour);
-    border: 2px solid var(--primary-color);
-    transition: color 0.3s ease-in-out;
-    margin-top: 16px;
+#ca1.owl-carousel .item1::before {
+  background-image: url("../image/Banner1.webp");
 }
-.btnoutline:hover{
-  color: var(--primary-color);
+#ca1.owl-carousel .item2::before {
+  background-image: url("../image/Banner2.webp");
+}
+#ca1.owl-carousel .item3::before {
+  background-image: url("../image/Banner3.webp");
+}
+#ca1.owl-carousel .item4::before {
+  background-image: url("../image/Banner4.webp");
+}
+
+.bannertext1  {
+  border-radius: 25px;
+  color: #ffffff;
+}
+.bannertext1 .display-2{
+color: #ffffff;
+}
+.bannertext1 .btnoutline {
+  border: 2px solid var(--lightBg);
+  color: var(--lightBg);
+}
+
+#ca1 .owl-item.active .display-2{
+  animation: 1s 0.5s both animate__fadeIn_Right;
+}
+#ca1 .owl-item.active .fifthH{
+  animation: 1s 0.6s both animate__fadeIn_Right;
+}
+#ca1 .owl-item.active .btnoutline{
+  animation: 1.2s 0.7s both animate__animate__fadeInUp;
+}
+
+@keyframes animate__fadeIn_Right {
+  0% {
+    -webkit-transform: translateX(-80px);
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes animate__animate__fadeInUp {
+  0% {
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+/* From Uiverse.io by cssbuttons-io */ 
+.btnoutline {
+  display: inline-block;
+  padding: 12px 16px;
+  margin-top: 16px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--black);
+  transition: color 0.5s;
+  z-index: 1;
+  border-radius: 0;
+  font-weight: 500;
+  color: var(--black);
+}
+
+
+
+.btnoutline:hover {
+  color: #fff;
+}
+
+.btnoutline:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: var(--black);
+  width: 120%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transform: translate(0%,0%);
+  transition: all 0.7s,background-color 0.5s;
+}
+
+.btnoutline:hover:before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.btnoutline:active:before {
+  background-color: #181818;
+  transition: background-color 0s;
 }
 
 
@@ -411,13 +533,9 @@ img {
 }
 @keyframes animate__fadeInUp {
   0% {
-    -webkit-transform: translateY(200px);
-    transform: translateY(200px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -489,7 +607,7 @@ img {
 margin-top: 8px;
 }
 .footerLinks{
-  color: var(--accentColour);
+  color: var(--Grey);
   transition: color 0.3s ease-in-out;
 }
 .footerLinks:hover{
@@ -514,7 +632,7 @@ margin: 0;
 
 
 .addressFooter a{
-  color: var(--accentColour);
+  color: var(--Grey);
   transition: color 0.3s ease-in-out;
 }
 .addressFooter a:hover{
@@ -608,7 +726,7 @@ transition: opacity 0.3s ease-in-out;
 }
 
 .copyright b:hover {
-  color: var(--fade);
+  color: var(--lightAccent);
 }
 .copyright b {
   color: var(--lightBg);
@@ -628,14 +746,14 @@ transition: opacity 0.3s ease-in-out;
 }
 
 .headSocial a{
-  color: var(--primary-color);
+  color: var(--secondary-color);
   padding: 0 8px;
   font-size: 18px;
   transition: color 0.3s ease-in-out;
 }
 
 .headSocial a:hover{
-  color: var(--secondary-color);
+  color: var(--black);
 }
 
 
@@ -648,12 +766,12 @@ transition: opacity 0.3s ease-in-out;
 
 /* collection Products section start */
 .anchorStyle {
-  color: var(--accentColour);
+  color: var(--Grey);
   transition: color 0.3s ease-in-out;
 }
 
 .anchorStyle:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .collectionProducts .owl-dots {
@@ -676,7 +794,7 @@ height: auto;
   border-radius: 50%;
   border: none;
   display: inline-block;
-  background: var(--lightAccent);
+  background: var(--Grey);
   margin: 4px 0;
 }
 .collectionProducts .owl-dots button.owl-dot.active {
@@ -695,6 +813,27 @@ height: auto;
 .collectionProducts .owl-carousel .item .collectionCard.plusMargin{
   margin-top: -30px;
 }
+
+  .filter-button-group button {
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px 10px 0;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+  .filter-button-group button.active {
+    background: #333;
+    color: #fff;
+  }
+  .grid-itemIsotop img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+  }
+
 /* collection Products section end */
 
 /* philosophy section start */
@@ -710,15 +849,19 @@ height: auto;
 
 /* different from other section start */
 .differentFromOther {
-    background-color: var(--lightprimary);
+    background: linear-gradient(to right,#00000031 40%, #00000031) center/ cover, url("../image/setApart.webp") center/cover no-repeat;
+    background-attachment: fixed;
 }
 .differentFromOther .container>.row {
   row-gap: 24px;
 }
+.differentFromOther .thirdH{
+  color: #ffffff;
+}
 .uniqueCard{
   text-align: center;
   padding: 12px;
-  background-color: var(--lightBg);
+  background-color: #f1f1f1b9;
 }
 .uniqueCard .uniqueIcon{
 width: 80px;
@@ -1101,3 +1244,29 @@ color: #000;
 }
 
 /* gallery categories end */
+
+
+
+.collectionProducts  .spotlight {
+    cursor: url("../image/Cursor.png"), zoom-in;
+}
+
+.collectionProducts  a.spotlight{
+  position: relative;
+}
+
+.collectionProducts  a.spotlight::after{
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: rgba(0, 0, 0, 0.459);
+ opacity: 0;
+ transition: opacity 0.3s ease;
+}
+
+.collectionProducts  a.spotlight:hover::after{
+ opacity: 1;
+}
