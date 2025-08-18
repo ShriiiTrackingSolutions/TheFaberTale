@@ -979,6 +979,12 @@ margin-bottom: 24px;
   align-items: center;
   row-gap: 30px;
 }
+
+.textPartCofoun{
+ padding: 30px 24px;
+ background-color: var(--lightBg);
+}
+  
 /* coFounder Section end */
 
  /* Why choose us section start */
