@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | TheFaberTale - Premier Epoxy Resin Furniture</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="fevicon.jpg" />
+    <!-- Meta Robots (SEO Indexing): -->
+<meta name="robots" content="index, follow">
+<meta name="description" content="TheFaberTale is a premier destination for stylish and innovative epoxy resin furniture, led by the visionary entrepreneur Mr. Akash Agrawal."/>
+<meta name="keywords" content="Keywords">
+<meta name="author" content="Author Name">
+
+<!-- Open Graph (Social Media Sharing) -->
+<meta property="og:title" content="Products | TheFaberTale - Premier Epoxy Resin Furniture">
+<meta property="og:description" content="Learn more about TheFaberTale, our mission, and the craftsmanship behind our epoxy resin furniture.">
+<meta property="og:image" content="With URL og-image-(1200 x 630 px).jpg">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="Website URL">
+<meta property="og:type" content="website">
+
+
+    <link fetchpriority="high" rel="preload" href="image/TheFaberTale-Logo.webp" as="image" type="image/webp" />
+
+    <!-- Preload -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="preload" as="style" href="css/style.css" />
+    <link rel="preload" as="style" href="css/responsive.css" />
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preconnect" href="https://kit.fontawesome.com" />
+    <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
+    <script src="https://kit.fontawesome.com/52ca9e0df4.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    
+    <!-- header start -->
+    <header>
+      <div class="wrapheder">
+        <div id="header">
+        
+        </div>
+        <!-- <li class="navLi"><a href="#" class="navLink">Dropdown lavel-1 </a><ul class="dropdownList"><li class="navLi"><a href="#" class="navLink">Dropdown lavel-2</a></li><li class="navLi"><a href="#" class="navLink">Dropdown lavel-2</a></li><li class="navLi"><a href="#" class="navLink">Dropdown lavel-2 </a><ul class="dropdownList"><li class="navLi"><a href="#" class="navLink">Dropdown lavel-3</a></li><li class="navLi"><a href="#" class="navLink">Dropdown lavel-3</a></li><li class="navLi"><a href="#" class="navLink">Dropdown lavel-3</a></li></ul></li></ul></li> -->
+      </div>
+    </header>
+
+    
+    <!-- header start -->
+
+
+    <section id="headBelowContent" class="OtherBanner AboutPage0">
+      <div class="container-fluid">
+        <h1 class="display-2">Products</h1>
+      </div>
+    </section>
+
+
+
+<section class="collectionProducts defaultPadding">
+  <div class="container">
+    <!-- Filter Buttons -->
+    <div class="filter-button-group mb-4">
+      <button class="active" data-filter="*">Show All</button>
+      <button data-filter=".Epo_DiningT">Epoxy Dining Table</button>
+      <button data-filter=".Epo_CoffeeT">Epoxy Coffee Table</button>
+      <button data-filter=".PaperMeshLamps">Paper Mesh Lamps</button>
+      <button data-filter=".PaperMeshT">Paper Mesh Table</button>
+      <button data-filter=".LiveEdgeWoodenT">Live Edge Wooden Table</button>
+      <button data-filter=".InlayT">Inlay Table</button>
+      <button data-filter=".CharcoalT">Charcoal Table</button>
+    </div>
+
+
+    <!-- Product Grid -->
+    <div class="row grid g-2 g-sm-4">
+    </div>
+
+
+
+  </div>
+</section>
+
+<!-- ✅ Bootstrap Modal (shared for all products) -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="modalTitle" class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Carousel -->
+        <div class="owl-carousel owl-theme" id="productCarousel"></div>
+
+        <!-- Info -->
+        <div class="product-info mt-3">
+          <p id="modalDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- whatsapp FAB icon -->
+    <div class="fab-container">
+      <a class="set-url-target" rel="noopener" data-mobile-target="" data-desktop-target="_blank" target="_blank" href="https://api.whatsapp.com/send?phone=number">
+        <svg xmlns="http://www.w3.org/2000/svg" width="59.54px" height="60px" viewBox="0 0 256 258">
+          <defs>
+            <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+              <stop offset="0%" stop-color="#1faf38"></stop>
+              <stop offset="100%" stop-color="#60d669"></stop>
+            </linearGradient>
+            <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+              <stop offset="0%" stop-color="#f9f9f9"></stop>
+              <stop offset="100%" stop-color="#fff"></stop>
+            </linearGradient>
+          </defs>
+          <path fill="url(#logosWhatsappIcon0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"></path>
+          <path fill="url(#logosWhatsappIcon1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"></path>
+          <path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"></path>
+        </svg>
+      </a>
+    </div>
+    <!-- Call FAB icon -->
+    <div class="Call-fab-container">
+      <a rel="noopener" target="_blank" href="tel:number">
+        <img style="height: 60px; width: 60px" src="image/phone-call.png" alt="phone icon" />
+      </a>
+    </div>
+
+
+    <!-- footer section start  -->
+    <footer id="footer" class="footer"> </footer>
+    <!-- footer section end  -->
+
+    <!-- ✅ Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+
+<script>
+  /* -----------------------------------------------------------
+   * 1) Product data (mock backend JSON)
+   *    - No price here, just id, title, category, images[], desc
+   * ----------------------------------------------------------- */
+  const products = [
+    { id: 1, title: "Epoxy Dining Table 1", category: "Epo_DiningT",
+      images: ["https://picsum.photos/seed/dining1a/600/400","https://picsum.photos/seed/dining1b/600/400"],
+      desc: "Beautiful epoxy dining table with natural wood and resin finish." },
+    { id: 2, title: "Epoxy Coffee Table 1", category: "Epo_CoffeeT",
+      images: ["https://picsum.photos/seed/coffee1a/600/400","https://picsum.photos/seed/coffee1b/600/400"],
+      desc: "Modern epoxy coffee table perfect for living spaces." },
+    { id: 3, title: "Paper Mesh Lamp", category: "PaperMeshLamps",
+      images: ["https://picsum.photos/seed/lamp1a/600/400"],
+      desc: "Eco-friendly paper mesh lamp handcrafted for unique interiors." },
+    { id: 4, title: "Paper Mesh Table", category: "PaperMeshT",
+      images: ["https://picsum.photos/seed/papertable1a/600/400"],
+      desc: "Sustainable paper mesh table with artistic design." },
+    { id: 5, title: "Live Edge Wooden Table", category: "LiveEdgeWoodenT",
+      images: ["https://picsum.photos/seed/liveedge1a/600/400","https://picsum.photos/seed/liveedge1b/600/400"],
+      desc: "Natural live edge table preserving the beauty of wood." },
+    { id: 6, title: "Inlay Table", category: "InlayT",
+      images: ["https://picsum.photos/seed/inlay1a/600/400"],
+      desc: "Premium handcrafted inlay table with intricate patterns." },
+    { id: 7, title: "Charcoal Table", category: "CharcoalT",
+      images: ["https://picsum.photos/seed/charcoal1a/600/400","https://picsum.photos/seed/charcoal1b/600/400"],
+      desc: "Charcoal finish table with bold aesthetics." }
+  ];
+
+  /* -----------------------------------------------------------
+   * 2) Render the grid (cards) from the products object
+   * ----------------------------------------------------------- */
+  function renderProducts() {
+    let html = "";
+    products.forEach(p => {
+      html += `
+        <div class="col-xl-3 col-lg-4 col-6 grid-itemIsotop ${p.category}">
+          <div class="card product-card" data-id="${p.id}">
+            <img src="${p.images[0]}" class="card-img-top" alt="${p.title}">
+            <div class="card-body p-2">
+              <h6 class="card-title text-truncate mb-0">${p.title}</h6>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    $(".grid").html(html);
+  }
+
+  /* -----------------------------------------------------------
+   * 3) Isotope init (called only after images are fully loaded)
+   * ----------------------------------------------------------- */
+  let $grid = null;
+  function initIsotope() {
+    $grid = $(".grid").isotope({
+      itemSelector: ".grid-itemIsotop",
+      percentPosition: true,
+      masonry: { columnWidth: ".grid-itemIsotop" }
+    });
+  }
+
+  /* -----------------------------------------------------------
+   * 4) Modal + Owl Carousel population (single shared modal)
+   * ----------------------------------------------------------- */
+  function openProductModal(productId) {
+    const product = products.find(p => p.id == productId);
+    if (!product) return;
+
+    // Set title & description
+    $("#modalTitle").text(product.title);
+    $("#modalDesc").text(product.desc);
+
+    // Reset & rebuild carousel items safely
+    const $carousel = $("#productCarousel");
+
+    // If already initialized, destroy cleanly
+    if ($carousel.hasClass("owl-loaded")) {
+      $carousel.trigger("destroy.owl.carousel");
+      // Remove Owl wrapper leftovers to prevent duplicates
+      $carousel.find(".owl-stage-outer").children().unwrap();
+      $carousel.removeClass("owl-center owl-loaded owl-text-select-on");
+    }
+
+    // Inject new slides
+    $carousel.empty();
+    product.images.forEach(src => {
+      $carousel.append(`
+        <div class="item">
+          <img src="${src}" class="img-fluid rounded" alt="${product.title}">
+        </div>
+      `);
+    });
+
+    // Re-init carousel
+    $carousel.owlCarousel({
+      loop: true,
+      margin: 12,
+      nav: false,
+      dots: true,
+      dotsEach: 1,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      items: 1,
+    });
+
+    // Show Bootstrap modal
+    const modal = new bootstrap.Modal(document.getElementById("productModal"));
+    modal.show();
+  }
+
+  /* -----------------------------------------------------------
+   * 5) Events
+   *    - Card click -> open modal
+   *    - Filter buttons -> Isotope filter
+   * ----------------------------------------------------------- */
+  $(document).on("click", ".product-card", function () {
+    const id = $(this).data("id");
+    openProductModal(id);
+  });
+
+  $(".filter-button-group").on("click", "button", function () {
+    $(".filter-button-group button").removeClass("active");
+    $(this).addClass("active");
+    const filterValue = $(this).attr("data-filter");
+    if ($grid) $grid.isotope({ filter: filterValue });
+  });
+
+  /* -----------------------------------------------------------
+   * 6) Page load sequence:
+   *    - Render cards
+   *    - Wait for ALL images in grid to load (imagesLoaded)
+   *    - THEN initialize Isotope
+   *    - (Optional) On each image load progress, if $grid exists, relayout
+   * ----------------------------------------------------------- */
+  $(document).ready(function () {
+    renderProducts();
+
+    // Wait for all thumbnails to load before Isotope init
+    const $gridEl = $(".grid");
+    $gridEl.imagesLoaded()
+      .always(function () {
+        // All images loaded -> init Isotope once
+        initIsotope();
+      })
+      .progress(function () {
+        // As each image loads, if Isotope is ready, relayout to avoid micro-shifts
+        if ($grid) $grid.isotope("layout");
+      });
+  });
+
+  /* -----------------------------------------------------------
+   * 7) (Optional nicety)
+   *    Reset carousel to first slide each time modal is hidden,
+   *    so next product doesn't start on a later slide.
+   * ----------------------------------------------------------- */
+  $("#productModal").on("hidden.bs.modal", function () {
+    const $carousel = $("#productCarousel");
+    if ($carousel.hasClass("owl-loaded")) {
+      $carousel.trigger("to.owl.carousel", [0, 0, true]);
+    }
+  });
+</script>
+
+  
+    <script defer src="js/script.js"></script>
+  </body>
+</html>
