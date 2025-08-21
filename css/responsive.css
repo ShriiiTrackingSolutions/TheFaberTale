@@ -1,5 +1,8 @@
 
 @media (max-width: 1399.98px) {
+  .filter-button-group button{
+  font-size: 12px;
+}
   
 }
 @media (max-width: 1199.98px) {
@@ -22,9 +25,6 @@
   display: none;
 }
 
-.filter-button-group button{
-  font-size: 14px;
-}
 }
 
 
@@ -140,7 +140,28 @@
  .grid-sizer,.grid-item{
     width: calc(50% - 24px);                                                                              ;
   }
+
+.filter-button-group{
+  width: 650px;
 }
+
+.overLayFilter::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-image: linear-gradient(to right, #ffffff00 84%, #c8f5f5ea);
+  pointer-events: none;
+  z-index: 3;
+}
+
+}
+
 
 @media (max-width: 575.98px) {
 
@@ -168,12 +189,12 @@
     width: 0;
   }
 
-  .filter-button-group button{
-  font-size: 12px;
-}
-
 .coFounderSection .container>.row {
   flex-direction: column-reverse;
+}
+
+.collectionProducts  .card-title{
+  font-size: 12px;
 }
 }
 

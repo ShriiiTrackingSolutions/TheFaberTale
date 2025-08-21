@@ -65,18 +65,22 @@
 
 
 
-<section class="collectionProducts defaultPadding">
+<section class="collectionProducts defaultPadding" id="productSection">
   <div class="container">
     <!-- Filter Buttons -->
-    <div class="filter-button-group mb-4">
-      <button class="active" data-filter="*">Show All</button>
-      <button data-filter=".Epo_DiningT">Epoxy Dining Table</button>
-      <button data-filter=".Epo_CoffeeT">Epoxy Coffee Table</button>
-      <button data-filter=".PaperMeshLamps">Paper Mesh Lamps</button>
-      <button data-filter=".PaperMeshT">Paper Mesh Table</button>
-      <button data-filter=".LiveEdgeWoodenT">Live Edge Wooden Table</button>
-      <button data-filter=".InlayT">Inlay Table</button>
-      <button data-filter=".CharcoalT">Charcoal Table</button>
+    <div class="overLayFilter">
+      <div class="filterWrap">
+      <div class="filter-button-group">
+        <button class="active" data-filter="*">Show All</button>
+        <button data-filter=".Epo_DiningT">Epoxy Dining Table</button>
+        <button data-filter=".Epo_CoffeeT">Epoxy Coffee Table</button>
+        <button data-filter=".PaperMeshLamps">Paper Mesh Lamps</button>
+        <button data-filter=".PaperMeshT">Paper Mesh Table</button>
+        <button data-filter=".LiveEdgeWoodenT">Live Edge Wooden Table</button>
+        <button data-filter=".InlayT">Inlay Table</button>
+        <button data-filter=".CharcoalT">Charcoal Table</button>
+      </div>
+    </div>
     </div>
 
 
@@ -91,7 +95,7 @@
 
 <!-- ✅ Bootstrap Modal (shared for all products) -->
 <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 id="modalTitle" class="modal-title">Modal title</h5>
@@ -157,29 +161,365 @@
    * 1) Product data (mock backend JSON)
    *    - No price here, just id, title, category, images[], desc
    * ----------------------------------------------------------- */
-  const products = [
-    { id: 1, title: "Epoxy Dining Table 1", category: "Epo_DiningT",
-      images: ["https://picsum.photos/seed/dining1a/600/400","https://picsum.photos/seed/dining1b/600/400"],
-      desc: "Beautiful epoxy dining table with natural wood and resin finish." },
-    { id: 2, title: "Epoxy Coffee Table 1", category: "Epo_CoffeeT",
-      images: ["https://picsum.photos/seed/coffee1a/600/400","https://picsum.photos/seed/coffee1b/600/400"],
-      desc: "Modern epoxy coffee table perfect for living spaces." },
-    { id: 3, title: "Paper Mesh Lamp", category: "PaperMeshLamps",
-      images: ["https://picsum.photos/seed/lamp1a/600/400"],
-      desc: "Eco-friendly paper mesh lamp handcrafted for unique interiors." },
-    { id: 4, title: "Paper Mesh Table", category: "PaperMeshT",
-      images: ["https://picsum.photos/seed/papertable1a/600/400"],
-      desc: "Sustainable paper mesh table with artistic design." },
-    { id: 5, title: "Live Edge Wooden Table", category: "LiveEdgeWoodenT",
-      images: ["https://picsum.photos/seed/liveedge1a/600/400","https://picsum.photos/seed/liveedge1b/600/400"],
-      desc: "Natural live edge table preserving the beauty of wood." },
-    { id: 6, title: "Inlay Table", category: "InlayT",
-      images: ["https://picsum.photos/seed/inlay1a/600/400"],
-      desc: "Premium handcrafted inlay table with intricate patterns." },
-    { id: 7, title: "Charcoal Table", category: "CharcoalT",
-      images: ["https://picsum.photos/seed/charcoal1a/600/400","https://picsum.photos/seed/charcoal1b/600/400"],
-      desc: "Charcoal finish table with bold aesthetics." }
-  ];
+
+  const products = [{
+ 		id: 1,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product1_1.webp", "image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product1_2.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product1_3.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product1_4.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 2,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product2_1.webp", "image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product2_2.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product2_3.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product2_4.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 3,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product3_1.webp", "image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product3_2.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product3_3.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product3_4.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product3_5.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 4,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product4_1.webp", "image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product4_2.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 5,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product5_1.webp", "image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product5_2.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product5_3.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product5_4.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 6,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product6_1.webp", "image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product6_2.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product6_3.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 7,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product7_1.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 8,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product8.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 9,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product9.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 10,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product10.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 11,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product11.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 12,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product12_1.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product12_2.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product12_3.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 13,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product13_1.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product13_2.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product13_3.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product13_4.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 14,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product14_1.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product14_2.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 15,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product15_1.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product15_2.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product15_3.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product15_4.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 16,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product16_1.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product16_2.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product16_3.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product16_4.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 17,
+ 		title: "Epoxy Coffee Table",
+ 		category: "Epo_CoffeeT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product17_1.webp","image/TheFaberTaleProdImg/EpoxyCoffeeTable/Product17_2.webp"],
+ 		desc: "Modern epoxy coffee table perfect for living spaces."
+ 	},
+   {
+ 		id: 28,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product1_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product1_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product1_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product1_4.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 29,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product2_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product2_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product2_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product2_4.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product2_5.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 30,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product3_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product3_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product3_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product3_4.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product3_5.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 31,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product4_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product4_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product4_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product4_4.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 32,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product5_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product5_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product5_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product5_4.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product5_5.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 33,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product6_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product6_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product6_3.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 34,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product7_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product7_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product7_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product7_4.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 35,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product8_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product8_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product8_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product8_4.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product8_5.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 36,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product9_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product9_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product9_3.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 37,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product10_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product10_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product10_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product10_4.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product10_5.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 38,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product11_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product11_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product11_3.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 39,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product12_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product12_2.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 40,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product13_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product13_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product13_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product13_4.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product13_5.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+   {
+ 		id: 41,
+ 		title: "Epoxy Dining Table",
+ 		category: "Epo_DiningT",
+ 		images: ["image/TheFaberTaleProdImg/EpoxyDiningTable/Product15_1.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product15_2.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product15_3.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product15_4.webp","image/TheFaberTaleProdImg/EpoxyDiningTable/Product15_5.webp"],
+ 		desc: "Beautiful epoxy dining table with natural wood and resin finish."
+ 	},
+ 	 {
+ 		id: 51,
+ 		title: "Paper Mesh Lamp",
+ 		category: "PaperMeshLamps",
+ 		images: ["image/TheFaberTaleProdImg/PaperMeshLamps/Product1.webp"],
+ 		desc: "Eco-friendly paper mesh lamp handcrafted for unique interiors."
+ 	},
+ 	 {
+ 		id: 52,
+ 		title: "Paper Mesh Lamp",
+ 		category: "PaperMeshLamps",
+ 		images: ["image/TheFaberTaleProdImg/PaperMeshLamps/Product2.webp"],
+ 		desc: "Eco-friendly paper mesh lamp handcrafted for unique interiors."
+ 	},
+ 	{
+ 		id: 60,
+ 		title: "Paper Mesh Table",
+ 		category: "PaperMeshT",
+ 		images: ["image/TheFaberTaleProdImg/PaperMeshTable/Product1_1.webp","image/TheFaberTaleProdImg/PaperMeshTable/Product1_2.webp","image/TheFaberTaleProdImg/PaperMeshTable/Product1_3.webp","image/TheFaberTaleProdImg/PaperMeshTable/Product1_4.webp"],
+ 		desc: "Sustainable paper mesh table with artistic design."
+ 	},
+ 	{
+ 		id: 68,
+ 		title: "Live Edge Wooden Table",
+ 		category: "LiveEdgeWoodenT",
+ 		images: ["image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product1_1.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product1_2.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product1_3.webp"],
+ 		desc: "Natural live edge table preserving the beauty of wood."
+ 	},
+ 	 {
+ 	 	id: 69,
+ 		title: "Live Edge Wooden Table",
+ 		category: "LiveEdgeWoodenT",
+ 		images: ["image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product2_1.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product2_2.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product2_3.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product2_4.webp"],
+ 		desc: "Natural live edge table preserving the beauty of wood."
+ 	},
+ 	 {
+ 	 	id: 70,
+ 		title: "Live Edge Wooden Table",
+ 		category: "LiveEdgeWoodenT",
+ 		images: ["image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product3_1.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product3_2.webp"],
+ 		desc: "Natural live edge table preserving the beauty of wood."
+ 	},
+ 	 {
+ 	 	id: 71,
+ 		title: "Live Edge Wooden Table",
+ 		category: "LiveEdgeWoodenT",
+ 		images: ["image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product4_1.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product4_2.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product4_3.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product4_4.webp"],
+ 		desc: "Natural live edge table preserving the beauty of wood."
+ 	},
+ 	 {
+ 	 	id: 72,
+ 		title: "Live Edge Wooden Table",
+ 		category: "LiveEdgeWoodenT",
+ 		images: ["image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product5_1.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product5_2.webp"],
+ 		desc: "Natural live edge table preserving the beauty of wood."
+ 	},
+ 	 {
+ 	 	id: 73,
+ 		title: "Live Edge Wooden Table",
+ 		category: "LiveEdgeWoodenT",
+ 		images: ["image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product6_1.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product6_2.webp"],
+ 		desc: "Natural live edge table preserving the beauty of wood."
+ 	},
+ 	 {
+ 	 	id: 74,
+ 		title: "Live Edge Wooden Table",
+ 		category: "LiveEdgeWoodenT",
+ 		images: ["image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product7_1.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product7_2.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product7_3.webp"],
+ 		desc: "Natural live edge table preserving the beauty of wood."
+ 	},
+ 	 {
+ 	 	id: 75,
+ 		title: "Live Edge Wooden Table",
+ 		category: "LiveEdgeWoodenT",
+ 		images: ["image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product8_1.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product8_2.webp","image/TheFaberTaleProdImg/LiveEdgeWoodenTable/Product8_3.webp"],
+ 		desc: "Natural live edge table preserving the beauty of wood."
+ 	},
+ 	 {
+ 		id: 82,
+ 		title: "Inlay Table",
+ 		category: "InlayT",
+ 		images: ["image/TheFaberTaleProdImg/InlayTable/Product1_1.webp","image/TheFaberTaleProdImg/InlayTable/Product1_2.webp","image/TheFaberTaleProdImg/InlayTable/Product1_3.webp","image/TheFaberTaleProdImg/InlayTable/Product1_4.webp"],
+ 		desc: "Premium handcrafted inlay table with intricate patterns."
+ 	},
+ 	 {
+ 		id: 83,
+ 		title: "Inlay Table",
+ 		category: "InlayT",
+ 		images: ["image/TheFaberTaleProdImg/InlayTable/Product2_1.webp","image/TheFaberTaleProdImg/InlayTable/Product2_2.webp","image/TheFaberTaleProdImg/InlayTable/Product2_3.webp"],
+ 		desc: "Premium handcrafted inlay table with intricate patterns."
+ 	},
+ 	 {
+ 		id: 84,
+ 		title: "Inlay Table",
+ 		category: "InlayT",
+ 		images: ["image/TheFaberTaleProdImg/InlayTable/Product3.webp"],
+ 		desc: "Premium handcrafted inlay table with intricate patterns."
+ 	},
+    {
+ 		id: 85,
+ 		title: "Inlay Table",
+ 		category: "InlayT",
+ 		images: ["image/TheFaberTaleProdImg/InlayTable/Product4_1.webp","image/TheFaberTaleProdImg/InlayTable/Product4_2.webp","image/TheFaberTaleProdImg/InlayTable/Product4_3.webp","image/TheFaberTaleProdImg/InlayTable/Product4_4.webp","image/TheFaberTaleProdImg/InlayTable/Product4_5.webp"],
+ 		desc: "Premium handcrafted inlay table with intricate patterns."
+ 	},
+    {
+ 		id: 86,
+ 		title: "Inlay Table",
+ 		category: "InlayT",
+ 		images: ["image/TheFaberTaleProdImg/InlayTable/Product5_1.webp","image/TheFaberTaleProdImg/InlayTable/Product5_2.webp","image/TheFaberTaleProdImg/InlayTable/Product5_3.webp"],
+ 		desc: "Premium handcrafted inlay table with intricate patterns."
+ 	},
+    {
+ 		id: 87,
+ 		title: "Inlay Table",
+ 		category: "InlayT",
+ 		images: ["image/TheFaberTaleProdImg/InlayTable/Product6_1.webp","image/TheFaberTaleProdImg/InlayTable/Product6_2.webp","image/TheFaberTaleProdImg/InlayTable/Product6_3.webp","image/TheFaberTaleProdImg/InlayTable/Product6_4.webp"],
+ 		desc: "Premium handcrafted inlay table with intricate patterns."
+ 	},
+ 	{
+ 		id: 98,
+ 		title: "Charcoal Table",
+ 		category: "CharcoalT",
+ 		images: ["image/TheFaberTaleProdImg/CharcoalTable/Product1_1.webp","image/TheFaberTaleProdImg/CharcoalTable/Product1_2.webp","image/TheFaberTaleProdImg/CharcoalTable/Product1_3.webp","image/TheFaberTaleProdImg/CharcoalTable/Product1_4.webp","image/TheFaberTaleProdImg/CharcoalTable/Product1_5.webp"],
+ 		desc: "Charcoal finish table with bold aesthetics."
+ 	},
+ 	 {
+ 		id: 99,
+ 		title: "Charcoal Table",
+ 		category: "CharcoalT",
+ 		images: ["image/TheFaberTaleProdImg/CharcoalTable/Product2_1.webp","image/TheFaberTaleProdImg/CharcoalTable/Product2_2.webp","image/TheFaberTaleProdImg/CharcoalTable/Product2_3.webp","image/TheFaberTaleProdImg/CharcoalTable/Product2_4.webp","image/TheFaberTaleProdImg/CharcoalTable/Product2_5.webp"],
+ 		desc: "Charcoal finish table with bold aesthetics."
+ 	},
+ 	 {
+ 		id: 100,
+ 		title: "Charcoal Table",
+ 		category: "CharcoalT",
+ 		images: ["image/TheFaberTaleProdImg/CharcoalTable/Product3_1.webp","image/TheFaberTaleProdImg/CharcoalTable/Product3_2.webp","image/TheFaberTaleProdImg/CharcoalTable/Product3_3.webp"],
+ 		desc: "Charcoal finish table with bold aesthetics."
+ 	},
+ ];
 
   /* -----------------------------------------------------------
    * 2) Render the grid (cards) from the products object
@@ -248,7 +588,7 @@
     // Re-init carousel
     $carousel.owlCarousel({
       loop: true,
-      margin: 12,
+      margin: 15,
       nav: false,
       dots: true,
       dotsEach: 1,
@@ -273,11 +613,20 @@
   });
 
   $(".filter-button-group").on("click", "button", function () {
-    $(".filter-button-group button").removeClass("active");
-    $(this).addClass("active");
-    const filterValue = $(this).attr("data-filter");
-    if ($grid) $grid.isotope({ filter: filterValue });
-  });
+  // 1) Change active class
+  $(".filter-button-group button").removeClass("active");
+  $(this).addClass("active");
+
+  // 2) Apply isotope filter
+  const filterValue = $(this).attr("data-filter");
+  if ($grid) $grid.isotope({ filter: filterValue });
+
+  // 3) Smooth scroll to top of product section
+  const target = document.getElementById("productSection");
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+});
 
   /* -----------------------------------------------------------
    * 6) Page load sequence:

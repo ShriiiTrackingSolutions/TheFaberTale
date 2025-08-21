@@ -720,7 +720,7 @@ transition: opacity 0.3s ease-in-out;
   background-color: #25d366;
 }
 .f-bottom {
-  background: var(--secondary-color);
+  background: var(--black);
   padding: 12px 0;
   color: #fff;
 }
@@ -774,13 +774,6 @@ transition: opacity 0.3s ease-in-out;
   color: var(--primary-color);
 }
 
-.collectionProducts .owl-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 5px;
-  width: 100%;
-}
 .collectionCard{
   background-color: var(--lightprimary);
   padding: 12px;
@@ -788,36 +781,12 @@ transition: opacity 0.3s ease-in-out;
 .collectionCard img{
 height: auto;
 }
-.collectionProducts .owl-dots button.owl-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: none;
-  display: inline-block;
-  background: var(--Grey);
-  margin: 4px 0;
-}
-.collectionProducts .owl-dots button.owl-dot.active {
-  background-color: var(--primary-color);
-}
-.collectionProducts .owl-dots button.owl-dot:focus {
-  outline: 0;
-}
 
-.collectionProducts .owl-carousel .item {
-  padding: 34px 0;
-}
-.collectionProducts .owl-carousel .item .collectionCard.minusMargin{
-  margin-top: 30px;
-}
-.collectionProducts .owl-carousel .item .collectionCard.plusMargin{
-  margin-top: -30px;
-}
 
   .filter-button-group button {
-    border: none;
+    border: 1px solid #0000002c;
     padding: 8px 16px;
-    margin: 0 5px 10px 0;
+    margin: 0 5px 8px 0;
     background: #eee;
     cursor: pointer;
     border-radius: 4px;
@@ -827,12 +796,20 @@ height: auto;
     background: #333;
     color: #fff;
   }
+
+  .collectionProducts .overLayFilter{
+    position: sticky;
+    top: 78px;
+    z-index: 2;
+  }
+    
   .grid-itemIsotop img {
     width: 100%;
     height: auto;
     border-radius: 6px;
     display: block;
   }
+
 
 /* collection Products section end */
 
@@ -1178,12 +1155,7 @@ invalid:focus, .was-validated .form-control:invalid:focus {
   justify-content: center;
   position: relative;
 }
-.ContactForm .modal {
-  z-index: 2;
-}
-.modal-backdrop{
-  z-index: 1;
-}
+
 .ContactForm .modal-content{
 color: #000;
 }
@@ -1279,6 +1251,16 @@ color: #000;
 /* gallery categories end */
 
 
+.collectionProducts{
+  position: relative;
+}
+.collectionProducts .filterWrap{
+  overflow-x: auto;
+  background-color: #c8f5f5;
+  padding: 8px 8px 0;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
 
 .collectionProducts  .spotlight {
     cursor: url("../image/Cursor.png"), zoom-in;
@@ -1317,3 +1299,9 @@ color: #ffffff;
 .OtherBanner.AboutPage0 {
     background: linear-gradient(#000000ab, #000000ab) 0 0 / cover, url('../image/OtherBanner.webp') center / cover no-repeat;
 }
+
+
+/* #productCarousel img{
+  max-height: calc(100vh - 152px);
+  object-fit: cover;
+} */
