@@ -1299,6 +1299,13 @@ color: #ffffff;
 .OtherBanner.AboutPage0 {
     background: linear-gradient(#000000ab, #000000ab) 0 0 / cover, url('../image/OtherBanner.webp') center / cover no-repeat;
 }
+.OtherBanner.GalleryPage0 {
+    background: linear-gradient(#00000075, #00000075) 0 0 / cover, url('../image/GalleryBanner.webp') center / cover no-repeat;
+}
+.OtherBanner.ContactPage0 {
+    background: linear-gradient(#00000075, #00000075) 0 0 / cover, url('../image/ContactBanner.webp') center / cover no-repeat;
+    border-bottom: 10px solid var(--black);
+}
 
 
 /* #productCarousel img{

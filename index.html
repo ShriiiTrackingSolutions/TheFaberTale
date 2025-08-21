@@ -237,18 +237,22 @@ At TheFaberTale, we believe that success is measured not by profits but by the h
 <!-- collection Products section start -->
 
 
-<section class="collectionProducts defaultPadding">
+<section class="collectionProducts defaultPadding" id="productSection">
   <div class="container">
 <!-- Filter Buttons -->
-<div class="filter-button-group mb-4">
-  <button class="active" data-filter="*">Show All</button>
-  <button data-filter=".Epo_DiningT">Epoxy Dining Table</button>
-  <button data-filter=".Epo_CoffeeT">Epoxy Coffee Table</button>
-  <button data-filter=".PaperMeshLamps">Paper Mesh Lamps</button>
-  <button data-filter=".PaperMeshT">Paper Mesh Table</button>
-  <button data-filter=".LiveEdgeWoodenT">Live Edge Wooden Table</button>
-  <button data-filter=".InlayT">Inlay Table</button>
-  <button data-filter=".CharcoalT">Charcoal Table</button>
+<div class="overLayFilter">
+  <div class="filterWrap">
+    <div class="filter-button-group">
+      <button class="active" data-filter="*">Show All</button>
+      <button data-filter=".Epo_DiningT">Epoxy Dining Table</button>
+      <button data-filter=".Epo_CoffeeT">Epoxy Coffee Table</button>
+      <button data-filter=".PaperMeshLamps">Paper Mesh Lamps</button>
+      <button data-filter=".PaperMeshT">Paper Mesh Table</button>
+      <button data-filter=".LiveEdgeWoodenT">Live Edge Wooden Table</button>
+      <button data-filter=".InlayT">Inlay Table</button>
+      <button data-filter=".CharcoalT">Charcoal Table</button>
+    </div>
+  </div>
 </div>
 
 
@@ -514,6 +518,13 @@ $('.filter-button-group').on('click', 'button', function(){
           updateSpotlight();
         });
     }
+
+    // 3) Smooth scroll to top of product section
+  const target = document.getElementById("productSection");
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
