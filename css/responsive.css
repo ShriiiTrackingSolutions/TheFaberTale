@@ -28,6 +28,48 @@
 }
 
 
+@media (max-width: 1024.98px) {
+  #ca1.owl-carousel .item1 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/BannerMob1.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item2 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/BannerMob2.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item3 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/BannerMob3.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item4 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/BannerMob4.webp") center/cover no-repeat;
+}
+
+}
+
+@media screen and (device-width: 1024px) and (device-height: 600px) and (orientation: landscape) {
+  /* Styles for Google Nest Hub in landscape */
+ #ca1.owl-carousel .item1 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner1.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item2 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner2.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item3 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner3.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item4 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/BannerMob4.webp") center/cover no-repeat;
+}
+
+}
+
+
 @media (max-width: 991.98px) {
   #ca1.owl-carousel .item > .container {
     position: relative;
@@ -227,5 +269,21 @@
     width: auto;
   }
 
+#ca1.owl-carousel .item1 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner1.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item2 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner2.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item3 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner3.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item4 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner4.webp") center/cover no-repeat;
 }
 
+}

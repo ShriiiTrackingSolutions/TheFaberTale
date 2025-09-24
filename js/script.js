@@ -33,8 +33,8 @@ function loadHeaderFooter(callback) {
                   <li class="navLi"><a href="contactUs.html" class="navLink">Contact</a></li>
                 </ul>
                 <div class="headSocial d-none d-lg-flex">
-                  <a href="https://www.facebook.com/people/The-Faber-Tale/61554707031271/"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="https://www.instagram.com/thefabertale/"><i class="fa-brands fa-instagram"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/people/The-Faber-Tale/61554707031271/"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a target="_blank" href="https://www.instagram.com/thefabertale/"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
             </nav>
